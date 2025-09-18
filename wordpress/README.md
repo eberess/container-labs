@@ -28,7 +28,7 @@ Cette recette fournit un environnement de développement local complet et portab
 1.  **Copiez le fichier `.env`** et mettez à jour les variables avec vos propres valeurs.
 2.  **Exécutez la commande** pour lancer l'environnement :
     ```sh
-    docker-compose up -d
+    docker compose up -d
     ```
     Avec podman
     ```sh
