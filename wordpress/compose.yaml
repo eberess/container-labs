@@ -12,7 +12,7 @@ services:
       WORDPRESS_DB_NAME: ${DB_NAME}
     volumes:
       - ./html:/var/www/html # Garde ce volume pour un contrôle total
-      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini # Augementation des uploads
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini # Augmentation des uploads
     networks:
       - wp_network
 
