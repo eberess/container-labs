@@ -1,0 +1,30 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: todo-app
+    ports:
+      - "${PORT_APP}:${PORT_APP}"
+    environment:
+      - PORT_APP=${PORT_APP}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    container_name: todo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_PASS}
+
+volumes:
+  mongo-data:
