@@ -10,25 +10,29 @@ Ce dépôt regroupe des exemples de configurations et de déploiements pour dive
 * **Moteurs de conteneurisation :** `Docker` | `Podman`
 * **Orchestration :** `Docker Compose`
 * **Serveurs web & Reverse Proxies :** `Nginx` | `Nginx Proxy Manager` | `Caddy`
-* **Systèmes d'exploitation :** `Linux` `Debian` `Alpine` `LXC`
+* **Systèmes d'exploitation :** `Linux` | `Debian` | `Alpine` | `LXC`
 * **Plateforme de virtualisation :** `Proxmox`
-* **Bases de données :** `PostgreSQL`, `MySQL`
+* **Bases de données :** `PostgreSQL`, `MySQL / MariaDB`
 
 ---
 
 ### 📂 Structure du dépôt
 
-Chaque dossier contient un projet spécifique, avec ses propres fichiers de configuration et une documentation détaillée dans son `README.md`.
+Chaque recette est un dossier autonome. Il contient tous les fichiers de configuration nécessaires et son propre `README.md` détaillé, vous permettant ainsi de l'utiliser indépendamment des autres exemples.
+
+---
+### 🚀 Mettre en pratique
+
+Chaque recette est un projet conteneurisé complet et autonome. Pour commencer, naviguez simplement vers le dossier du projet qui vous intéresse, parcourez son `README.md` et lancez l'environnement avec une seule commande.
+
+* **[Node.js + MongoDB](https://github.com/eberess/container-labs/tree/main/node-mongodb)** : Une API REST simple et fonctionnelle pour une liste de tâches, parfaite pour se familiariser avec la stack `Node.js`, `Express` et `MongoDB`.
+* **[Wordpress + MySQL/MariaDB](https://github.com/eberess/container-labs/tree/main/wordpress)** : Lancez un site WordPress fonctionnel en quelques secondes.
 
 ---
 
-### 🚀 Comment utiliser ces recettes
+### 🌐 Démonstrations en direct
 
-Chaque dossier est autonome. Il suffit de naviguer vers le répertoire du projet qui vous intéresse et de suivre les instructions du `README.md` correspondant. En général, les configurations peuvent être lancées avec une seule commande :
-
-`docker-compose up -d`
-ou, pour les environnements Podman :
-`podman-compose up -d`
+Certains de ces projets peuvent inclure une démonstration en direct. Vérifiez les `README.md` individuels pour les liens vers des exemples déployés.
 
 🌱 Contributions
 
