@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: library-app
+    ports:
+      - "${PORT_APP}:${PORT_APP}"
+    volumes:
+      - ./app:/app  
+    command: ["/bin/sh", "-c", "python -c 'from database import Base, engine; Base.metadata.create_all(bind=engine)' && uvicorn main:app --host 0.0.0.0 --port 8000"]
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:14-alpine
+    container_name: library-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  pg-data:
