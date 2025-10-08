@@ -32,7 +32,7 @@ Ce projet est conçu pour être lancé facilement avec Docker Compose, ce qui si
 1. **Prérequis** : Assurez-vous d'avoir Docker et Docker Compose installés sur votre machine.
 2. **Cloner le dépôt** :
 ```sh
-git clone https://github.com/votre-nom-utilisateur/container-labs.git
+git clone hhttps://github.com/eberess/container-labs.git
 cd container-labs/python-fastapi
 ```
 
