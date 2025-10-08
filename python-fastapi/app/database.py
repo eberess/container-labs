@@ -19,11 +19,7 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL)
 # Créer une session de base de données
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-<<<<<<< HEAD
 # Déclarer la base pour les modèles
-=======
-# Déclare la base pour les modèles
->>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d
 Base = declarative_base()
 
 # Fonction pour obtenir une session de base de données
@@ -32,8 +28,4 @@ def get_db():
     try:
         yield db
     finally:
-<<<<<<< HEAD
         db.close()
-=======
-        db.close()
->>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d

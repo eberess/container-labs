@@ -208,3 +208,5 @@ settings.ini
 *.bak
 *.backup
 *~
+
+.env
