@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 version: '3.8'
 
+=======
+>>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d
 services:
   app:
     build:
@@ -8,7 +11,11 @@ services:
     ports:
       - "${PORT_APP}:${PORT_APP}"
     volumes:
+<<<<<<< HEAD
       - ./app:/app  # Montage du volume pour le développement en temps réel
+=======
+      - ./app:/app  
+>>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d
     command: ["/bin/sh", "-c", "python -c 'from database import Base, engine; Base.metadata.create_all(bind=engine)' && uvicorn main:app --host 0.0.0.0 --port 8000"]
     environment:
       - DB_USER=${DB_USER}
@@ -39,4 +46,8 @@ services:
       start_period: 30s
 
 volumes:
+<<<<<<< HEAD
   pg-data:
+=======
+  pg-data:
+>>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d

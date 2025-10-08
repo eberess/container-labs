@@ -2,4 +2,8 @@ fastapi
 uvicorn
 sqlalchemy
 psycopg2-binary
+<<<<<<< HEAD
 pydantic
+=======
+pydantic
+>>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d

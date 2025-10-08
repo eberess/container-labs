@@ -27,6 +27,7 @@ Chaque recette est un projet conteneurisé complet et autonome. Pour commencer, 
 
 * **[Node.js + MongoDB](https://github.com/eberess/container-labs/tree/main/node-mongodb)** : Une API REST simple et fonctionnelle pour une liste de tâches, parfaite pour se familiariser avec la stack `Node.js`, `Express` et `MongoDB`.
 * **[Wordpress + MySQL/MariaDB](https://github.com/eberess/container-labs/tree/main/wordpress)** : Lancez un site WordPress fonctionnel en quelques secondes.
+* **[Node.js + PostgreSQL](https://github.com/eberess/container-labs/tree/main/node-postgresql)** : Une API REST robuste pour une application Node.js connectée à une base de données PostgreSQL. Elle est idéale pour créer des API robustes avec un modèle de données relationnel.
 
 ---
 

@@ -32,23 +32,20 @@ Ce projet est conçu pour être lancé facilement avec Docker Compose, ce qui si
 1. **Prérequis** : Assurez-vous d'avoir Docker et Docker Compose installés sur votre machine.
 2. **Cloner le dépôt** :
 ```sh
+<<<<<<< HEAD
 git clone hhttps://github.com/eberess/container-labs.git
+=======
+git clone https://github.com/votre-nom-utilisateur/container-labs.git
+>>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d
 cd container-labs/python-fastapi
 ```
 
-3. Configuration des variables d'environnement :
-
--   Créez un fichier ```.env``` à la racine du projet.
--   Copiez-y les variables d'environnement nécessaires pour la connexion à la base de données et le port de l'application.
-	
-```sh
-PORT_APP=8000
-DB_USER=root
-DB_PASS=password
-DB_NAME=library_db
-DB_HOST=db
-DB_PORT=5432
-```
+3. **Configuration des variables d'environnement** :
+   - Copiez le fichier d'exemple :
+   ```sh
+   cp .env.example .env
+   ```
+   - Modifiez le fichier `.env` selon vos besoins (les valeurs par défaut fonctionnent pour le développement local)
 
 4. **Lancement des conteneurs**:
 - L'application sera lancée avec une base de données PostgreSQL.
@@ -85,4 +82,8 @@ Cette commande est essentielle pour maintenir votre environnement de développem
 - Amélioration de la gestion du stock : Mettre en place des fonctionnalités pour gérer les stocks de vente et de prêt séparément.
 
 ---
+<<<<<<< HEAD
 Si vous souhaitez en discuter ou si vous avez des questions, n'hésitez pas à me contacter par e-mail ou [LinkedIn](https://www.linkedin.com/in/el-beressa/). Je serais ravi d'échanger avec vous.
+=======
+Si vous souhaitez en discuter ou si vous avez des questions, n'hésitez pas à me contacter par e-mail ou [LinkedIn](https://www.linkedin.com/in/el-beressa/). Je serais ravi d'échanger avec vous.
+>>>>>>> 33d59440a3122874a3707a7e08e51eab07d5cd4d
